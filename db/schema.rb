@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_24_115950) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_24_123540) do
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.integer "single_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "singles", force: :cascade do |t|
     t.string "name"
     t.text "bio"

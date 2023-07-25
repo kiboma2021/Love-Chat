@@ -14,7 +14,7 @@
   </div>
 
   <div>
-    <%= form_with(model: [@single, @single.comments.build]) do |form|  %>
+    <%= form_with model: [ @single, @single.comments.build ] do |form|  %>
       <div>
         <%= form.label 'New Comment' %>
         <%= form.text_area :body %>

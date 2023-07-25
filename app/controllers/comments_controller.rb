@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
   
       respond_to do |format|
         if @comment.save
-          format.html { redirect_to chat_url(@single), notice: "Comment was successfully created." }
+          format.html { redirect_to single_url(@single), notice: "Comment was successfully created." }
           format.json { render :show, status: :created, location: @comment }
         else
           format.html { render :new, status: :unprocessable_entity }
@@ -23,7 +23,6 @@ class CommentsController < ApplicationController
       end
     end
   
-    IMID
     # PATCH/PUT /comments/1 or /comments/1.json
     def update
       respond_to do |format|

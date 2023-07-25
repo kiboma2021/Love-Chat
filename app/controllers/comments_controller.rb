@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
     # POST /comments or /comments.json
     def create
-      @single=Single.find(params[:chat_id])
+      @single=Single.find(params[:single_id])
       @comment = @single.comments.new(comment_params)
   
       respond_to do |format|
@@ -55,11 +55,6 @@ class CommentsController < ApplicationController
   
       # Only allow a list of trusted parameters through.
       def comment_params
-        params.require(:comment).permit(:body, :chat_id)
+        params.require(:comment).permit(:body, :single_id)
       end
-
-
-
-
-
 end

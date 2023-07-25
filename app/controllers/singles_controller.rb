@@ -25,7 +25,7 @@ class SinglesController < ApplicationController
 
     respond_to do |format|
       if @single.save
-        format.html { redirect_to single_url(@single), notice: "Single was successfully created." }
+        format.html { redirect_to singles_url(@single), notice: "Single was successfully created." }
         format.json { render :show, status: :created, location: @single }
       else
         format.html { render :new, status: :unprocessable_entity }

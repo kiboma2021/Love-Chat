@@ -53,7 +53,9 @@
         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
           Liked
         </th>
-        <th class="px-4 py-2 col-span-3"></th>
+        <th class="px-4 py-2"></th>
+        <th class="px-4 py-2"></th>
+        <th class="px-4 py-2"></th>
       </tr>
     </thead>
 
@@ -68,9 +70,13 @@
           <td class="whitespace-nowrap px-4 py-2 text-gray-700"> <%= single.liked %> </td>
           <td class="whitespace-nowrap px-4 py-2 ">
               <%= link_to 'View', single, class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+            </td>
+            <td class="whitespace-nowrap px-4 py-2 ">
               <%= link_to 'Edit', edit_single_path(single), class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+            </td>
+            <td class="whitespace-nowrap px-4 py-2 ">
               <%= button_to 'Delete', singles_path, method: :delete, class: "inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
-          </td>
+            </td>
         </tr>
       <% end %>
     </tbody>

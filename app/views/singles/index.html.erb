@@ -3,6 +3,47 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
+<section>
+  <div
+    class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
+  >
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div
+        class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full"
+      >
+        <%=image_tag "party.avif", alt:'Party', class:"absolute inset-0 h-full w-full object-cover" %>
+      </div>
+
+      <div class="lg:py-24">
+        <h2 class="text-3xl font-bold sm:text-4xl">Quality Singles, Just Like You</h2>
+
+        <p class="mt-4 text-gray-600">
+          Like you, they are tired of dating games. 
+          You can have complete confidence that all of your 
+          compatible matches are looking for the same thing you are. 
+          Love that lasts.
+        </p>
+
+        <a
+          href="#"
+          class="mt-8 inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring focus:ring-yellow-400"
+        >
+          Join Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl">Singles</h1>
     <%= link_to 'New single', new_single_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>

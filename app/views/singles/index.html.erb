@@ -24,30 +24,13 @@
           Love that lasts.
         </p>
 
-        <a
-          href="#"
-          class="mt-8 inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring focus:ring-yellow-400"
-        >
-          Join Us
-        </a>
+        <%= link_to 'Join Us', new_single_path, class: "mt-8 inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring focus:ring-yellow-400" %>
       </div>
     </div>
   </div>
 </section>
 
 
-
-
-
-
-
-
-
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Singles</h1>
-    <%= link_to 'New single', new_single_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
 
   <div id="singles" class="min-w-full">
     <%= render @singles %>

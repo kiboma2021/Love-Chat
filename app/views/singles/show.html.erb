@@ -13,6 +13,17 @@
     <%= link_to 'Back to singles', singles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 
+
+
+  <div>
+    <% @single.comments.each  do |comment|  %>
+      <div>
+        <%= comment.body %>
+      </div>
+    <% end %>
+  </div>
+
+
   <div>
     <%= form_with model: [ @single, @single.comments.build ] do |form|  %>
       <div>

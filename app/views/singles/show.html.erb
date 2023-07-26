@@ -30,17 +30,20 @@
     </div>
 
     <div class="my-8">
-        <%= link_to 'Edit this single', edit_single_path(@single), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to 'Edit', edit_single_path(@single), class: "mt-2 rounded-lg py-3 px-5 bg-green-100 inline-block font-medium" %>
         <div class="inline-block ml-2">
-          <%= button_to 'Destroy this single', single_path(@single), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+          <%= button_to 'Delete', single_path(@single), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-100 font-medium" %>
         </div>
-        <%= link_to 'Back to singles', singles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to 'Back', singles_path, class: "ml-2 rounded-lg py-3 px-5 bg-yellow-100 inline-block font-medium" %>
     </div>
 
     <div class="my-8">
       <% @single.comments.each  do |comment|  %>
         <div>
-          <%= comment.body %>
+          <span class="font-bold">[<%= comment.created_at %> ]:</span>
+          <span class="italic">
+            <%= comment.body %>
+          </span>
         </div>
       <% end %>
     </div>
@@ -49,10 +52,11 @@
     <div>
       <%= form_with model: [ @single, @single.comments.build ] do |form|  %>
         <div>
-          <%= form.label 'New Comment' %>
+          <h3 class="font-extrabold"> <%= form.label 'New Comment' %> </h3> <br>
           <%= form.text_area :body %>
         </div>
-        <div>
+        <br>
+        <div class="ml-2 rounded-lg py-3 px-5 bg-blue-100 inline-block font-medium">
           <%= form.submit 'Submit' %>
         </div>
       <% end %>

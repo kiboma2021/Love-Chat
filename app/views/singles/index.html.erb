@@ -27,60 +27,56 @@
         <%= link_to 'Join Us', new_single_path, class: "mt-8 inline-block rounded bg-purple-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-700 focus:outline-none focus:ring focus:ring-yellow-400" %>
       </div>
     </div>
+  </div></section>
+
+
+<hr>
+<section>
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+      <thead class="ltr:text-left rtl:text-right">
+        <tr>
+          <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            Name
+          </th>
+          <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            Bio
+          </th>
+          <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            Age
+          </th>
+          <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+            Liked
+          </th>
+          <th class="px-4 py-2"></th>
+          <th class="px-4 py-2"></th>
+          <th class="px-4 py-2"></th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-200">
+        <% @singles.each do |single| %>
+          <tr>
+            <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+              <%= single.name %>
+            </td>
+            <td class="whitespace-nowrap px-4 py-2 text-gray-700"> <%= single.bio %> </td>
+            <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= single.age %></td>
+            <td class="whitespace-nowrap px-4 py-2 text-gray-700"> <%= single.liked %> </td>
+            <td class="whitespace-nowrap px-4 py-2 ">
+                <%= link_to 'View', single, class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+              </td>
+              <td class="whitespace-nowrap px-4 py-2 ">
+                <%= link_to 'Edit', edit_single_path(single), class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+              </td>
+              <td class="whitespace-nowrap px-4 py-2 ">
+                <%= button_to 'Delete', singles_path, method: :delete, class: "inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+              </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
--->
-<hr>
-<section>
-<div class="overflow-x-auto">
-  <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-    <thead class="ltr:text-left rtl:text-right">
-      <tr>
-        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Name
-        </th>
-        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Bio
-        </th>
-        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Age
-        </th>
-        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-          Liked
-        </th>
-        <th class="px-4 py-2"></th>
-        <th class="px-4 py-2"></th>
-        <th class="px-4 py-2"></th>
-      </tr>
-    </thead>
-
-    <tbody class="divide-y divide-gray-200">
-      <% @singles.each do |single| %>
-        <tr>
-          <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-            <%= single.name %>
-          </td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"> <%= single.bio %> </td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= single.age %></td>
-          <td class="whitespace-nowrap px-4 py-2 text-gray-700"> <%= single.liked %> </td>
-          <td class="whitespace-nowrap px-4 py-2 ">
-              <%= link_to 'View', single, class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
-            </td>
-            <td class="whitespace-nowrap px-4 py-2 ">
-              <%= link_to 'Edit', edit_single_path(single), class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
-            </td>
-            <td class="whitespace-nowrap px-4 py-2 ">
-              <%= button_to 'Delete', singles_path, method: :delete, class: "inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
-            </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
 </div>
-
-</section>

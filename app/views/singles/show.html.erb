@@ -1,9 +1,8 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="mx-auto md:w-2/3 w-full flex flex-col content-start">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
-
 
     <article class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg">
       <%= image_tag (@single.photo),alt:"Photo",class:"absolute inset-0 h-full w-full object-cover" %>
@@ -11,12 +10,15 @@
         <div class="p-4 sm:p-6">
 
             <h3 class="mt-0.5 text-lg text-white">
+              <span class="text-black">Name:</span>
               <%= @single.name %>
             </h3>
             <p class="mt-0.5 text-lg text-white">
+              <span class="text-black">Age: </span>
               <%= @single.age %>
             </p>
             <p class="mt-0.5 text-lg text-white">
+              <span class="text-black">Status: </span>
               <%= @single.liked %>
             </p>
         </div>
@@ -27,35 +29,33 @@
     <%= @single.bio %>
     </div>
 
+    <div>
+        <%= link_to 'Edit this single', edit_single_path(@single), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <div class="inline-block ml-2">
+          <%= button_to 'Destroy this single', single_path(@single), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+        </div>
+        <%= link_to 'Back to singles', singles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    </div>
+
+    <div>
+      <% @single.comments.each  do |comment|  %>
+        <div>
+          <%= comment.body %>
+        </div>
+      <% end %>
+    </div>
+
+
+    <div>
+      <%= form_with model: [ @single, @single.comments.build ] do |form|  %>
+        <div>
+          <%= form.label 'New Comment' %>
+          <%= form.text_area :body %>
+        </div>
+        <div>
+          <%= form.submit 'Submit' %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div>
-      <%= link_to 'Edit this single', edit_single_path(@single), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      <div class="inline-block ml-2">
-        <%= button_to 'Destroy this single', single_path(@single), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-      </div>
-      <%= link_to 'Back to singles', singles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-  </div>
-
-  <div>
-    <% @single.comments.each  do |comment|  %>
-      <div>
-        <%= comment.body %>
-      </div>
-    <% end %>
-  </div>
-
-
-  <div>
-    <%= form_with model: [ @single, @single.comments.build ] do |form|  %>
-      <div>
-        <%= form.label 'New Comment' %>
-        <%= form.text_area :body %>
-      </div>
-      <div>
-        <%= form.submit 'Submit' %>
-      </div>
-    <% end %>
-  </div>
-
 </div>

@@ -65,6 +65,6 @@ class SinglesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def single_params
-      params.require(:single).permit(:name, :bio, :age, :liked)
+      params.require(:single).permit(:name, :bio, :age, :liked, :photo)
     end
 end

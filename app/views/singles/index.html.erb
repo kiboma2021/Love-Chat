@@ -70,7 +70,7 @@
                 <%= link_to 'Edit', edit_single_path(single), class: "inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
               </td>
               <td class="whitespace-nowrap px-4 py-2 ">
-                <%= button_to 'Delete', singles_path, method: :delete, class: "inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
+                <%= button_to 'Delete', single_path(single), method: :delete, class: "inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700" %>
               </td>
           </tr>
         <% end %>

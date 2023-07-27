@@ -62,8 +62,15 @@ Before you start, ensure you have the following installed:
 
 You can now access the application at http://localhost:3000
 
+## Author
 
-###  Contributing
+👤 **Ben Kiboma**
+
+ - GitHub:[@kiboma2021](https://github.com/kiboma2021) 
+- LinkedIn:[@ben-kiboma](https://www.linkedin.com/in/ben-kiboma/) 
+
+## 🤝 Contributing
+
 Contributions are welcome! If you find any issues or want to enhance the application, please follow these steps:
 
     - Fork the project.
@@ -72,5 +79,14 @@ Contributions are welcome! If you find any issues or want to enhance the applica
     - Push to the branch: git push origin fix-xyz-issue or git push origin add-new-feature.
     - Submit a pull request explaining your changes.
 
-### Resources
-[Image Uploader](https://medium.com/@ehayne00/image-uploaders-in-a-ruby-on-rails-project-using-active-storage-1abdfe538426)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+[Image Uploader Documentation](https://medium.com/@ehayne00/image-uploaders-in-a-ruby-on-rails-project-using-active-storage-1abdfe538426)
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.

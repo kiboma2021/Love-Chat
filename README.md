@@ -37,23 +37,23 @@ Before you start, ensure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-
+    ```
     git clone https://github.com/kiboma2021/Love-Chat.git
 
 2. Change to the project\'s directory:
-
+    ```
     cd Love-Chat
 
 3. Install the required gems:
-
+    ```
     bundle install
 
 4. Install JavaScript dependencies:
-
+    ```
     yarn install
 
 5. Set up the database:
-
+    ```
     rails db:setup
 
 7. Start the local server:

@@ -2,6 +2,11 @@
 
 Welcome to Singles Application, a Ruby on Rails application for connecting singles! This application is built using Ruby on Rails, SQLite, and Tailwind CSS.
 
+![singles_ror](https://github.com/kiboma2021/Love-Chat/assets/93031593/abed24b0-3c3f-4655-a311-34a4dcd5af62)
+
+![singles2](https://github.com/kiboma2021/Love-Chat/assets/93031593/ac62c21f-f7d8-41d4-a875-89b534bb1ce2)
+
+
 ## Table of Contents
 
 - [Features](#features)
@@ -52,7 +57,7 @@ Before you start, ensure you have the following installed:
     rails db:setup
 
 7. Start the local server:
-
+    ```
     rails server or ./bin/dev
 
 You can now access the application at http://localhost:3000
@@ -68,4 +73,4 @@ Contributions are welcome! If you find any issues or want to enhance the applica
     - Submit a pull request explaining your changes.
 
 ### Resources
-Image Uploader[https://medium.com/@ehayne00/image-uploaders-in-a-ruby-on-rails-project-using-active-storage-1abdfe538426]
+[Image Uploader](https://medium.com/@ehayne00/image-uploaders-in-a-ruby-on-rails-project-using-active-storage-1abdfe538426)
